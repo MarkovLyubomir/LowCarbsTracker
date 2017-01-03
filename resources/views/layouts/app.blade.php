@@ -78,7 +78,17 @@
             </div>
         </nav>
 
-        @yield('content')
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2">
+                    @include('layouts.navbar')
+                </div>
+                
+                <div class="col-md-10">
+                    @yield('content')
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- Scripts -->

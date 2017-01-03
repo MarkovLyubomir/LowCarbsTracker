@@ -18,3 +18,10 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+
+
+Route::group(['prefix' => 'foods'], function() {
+	Route::get('/', 'FoodsController@index');
+	Route::get('/add', 'FoodsController@create');
+});
+
